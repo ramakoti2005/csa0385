@@ -1,0 +1,32 @@
+#include <stdio.h>
+#include <string.h>
+struct Person {
+    char name[50];
+    int age;
+    float height;
+};
+void printPerson(struct Person p) {
+    printf("Name: %s\n", p.name);
+    printf("Age: %d\n", p.age);
+    printf("Height: %.2f meters\n", p.height);
+}
+int main() {
+    struct Person person1;
+    strcpy(person1.name, "Alice");
+    person1.age = 30;
+    person1.height = 1.70;
+    printPerson(person1);
+    struct Person person2 = {"Bob", 25, 1.80};
+    printPerson(person2);
+    return 0;
+}
+
+
+
+output
+Name: Alice
+Age: 30
+Height: 1.70 meters
+Name: Bob
+Age: 25
+Height: 1.80 meters
